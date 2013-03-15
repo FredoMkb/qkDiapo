@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!-- ================================================== -->
+<title>qkDiapo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ================================================== -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300italic,400italic,500italic,300,400,500' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="qkdiapo.min.css" type="text/css" media="all" />
+<script src="http://code.jquery.com/jquery-latest.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="qkdiapo.min.js" charset="UTF-8"></script>
+<!-- ================================================== -->
+<style type="text/css">
+<!--
+body { font-family: "Ubuntu", Verdana, sans-serif; font-size: 15px; font-weight: 300; color: #333; line-height: 1.6em; background-color: #ddd; }
+a { text-decoration: none; outline: none; color: #00c; }
+a:hover { color: #c00; }
+a:active { color: #000; }
+a, strong, h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+#page { width: 850px; margin: 20px auto; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0px 0px 6px #ccc; }
+#tete ul { list-style: none; font-size: 13px; letter-spacing: 1px; margin: 40px 0px 0px 4px; padding: 0px; }
+#tete li { display: inline-block; margin: 0px 2px; padding: 0px; }
+#tete li a { color: #666; display: inline-block; margin: 0px; padding: 4px 12px; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0px 0px 6px #ccc; background-color: #fff; }
+#tete li a:hover { color: #000; border-color: #999; box-shadow: 0px 0px 6px #999; background-color: #f9f9f9; }
+#tete li a:active { color: #fff; border-color: #000; box-shadow: none; background-color: #333; }
+#corps { padding: 10px 20px; }
+#tete h1 { text-align: center; color: #888; margin: 0px; padding: 12px 12px; background-color: #f9f9f9; border: 1px solid #eee; border-radius: 25px; text-shadow: 1px 1px 0px #fff; box-shadow: 0 -20px 20px rgba(180, 180, 180, 0.2) inset; }
+#corps h2 { margin-top: 40px; padding-top: 20px; border-top: 2px solid #ddd; }
+#corps h3 { margin-top: 40px; }
+#corps ul, #corps ol { }
+#corps table { font-size: 13px; width: 100%; margin-bottom: 40px; }
+#corps table th { font-weight: 500; }
+#corps table td { font-weight: 300; }
+#corps table th, #corps table td { text-align: center; margin: 0px; padding: 6px 12px; vertical-align: middle; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+#corps table th:first-child, #corps table td:first-child { text-align: left; }
+#corps table th:last-child, #corps table td:last-child { width: 65%; text-align: left; border-right: none; }
+#corps table tr:hover > td, #corps table tr:hover > th { color: #000; background-color: #f9f9f9; }
+#corps pre, #corps code { font-family: Courier, monospace; color: #333; font-size: 12px; text-align: left; padding: 4px 12px; border: 1px solid #ddd; border-radius: 4px; background-color: #f9f9f9; }
+#diapos { width: 480px; height: 300px; box-shadow: 0 0 6px rgba(0, 0, 0, 0.3) inset; }
+#diapos > * { margin: 0; padding: 0; width: 480px; height: 300px; margin: 10px; }
+#k { margin: 0px; padding: 0px; text-align: center; font-size: 8px; line-height: 8px; } /* Signature Mini-logo FredoMkb */
+#k a { display: block; width: 16px; height: 16px; margin: 0px auto; opacity: 0.2; text-decoration: none; outline: none; border: none; background-repeat: no-repeat; background-position: center center; background-image: url('data:image/gif;base64,R0lGODlhEAAQAPABADIyMgAAACH5BAUAAAEALAAAAAAQABAAQAIdjI+pBrDbHmrUyVCvhvTW7FkauJWMGEZp93ysiRQAOw=='); }
+#k a:hover { opacity: 0.4; }
+hr { margin: 40px 20px; outline: none; border: 1px solid #ccc; }
+-->
+</style>
+<script type='text/javascript' charset="UTF-8"><!--
+$(document).ready(function() {		
+	$('#diapos').qkdiapo();
+	$('#diapo1').qkdiapo();
+	$('#diapo2').qkdiapo({fade_time: 1200, show_time: 6000, add_time: 2000});
+	$('#diapo3').qkdiapo({slide_tag: 'ul > li', nav_inner: false, nav_outer: false, nav_keys: false, sort_random: false});
+});
+// --></script>
+<!-- ================================================== -->
+</head>
+<body>
+<div id="page">
+<!-- ================================================== -->
+<div id="tete">
+	<h1>qkDiapo</h1>
+	<ul>
+		<li><a href="#pre" title="Présentation">Présentation</a></li>
+		<li><a href="#tel" title="Téléchargement">Téléchargement</a></li>
+		<li><a href="#int" title="Intégration">Intégration</a></li>
+		<li><a href="#act" title="Activation">Activation</a></li>
+		<li><a href="#con" title="Configuration">Configuration</a></li>
+		<li><a href="#exe" title="Exemples">Exemples</a></li>
+		<li><a href="index_fra.html" title="français">fra</a></li>
+		<li><a href="index_eng.html" title="english">eng</a></li>
+	</ul>
+</div>
+<!-- ================================================== -->
+<div id="corps">
+	<h2 id="pre" name="pre">Présentation</h2>
+	<p>Petit plug-in <strong>jQuery</strong> de diaporamas (slide-show), avec plusieurs options d'affichage et de navigation.</p>
+
+	<div id="diapos" class="diapo" style="">
+	<p><img src="diapos/img01.jpg" alt="Diapo1" /></p>
+	<p><img src="diapos/img02.jpg" alt="Diapo2" /></p>
+	<p><img src="diapos/img03.jpg" alt="Diapo3" /></p>
+	<p><img src="diapos/img04.jpg" alt="Diapo4" /></p>
+	<p><img src="diapos/img05.jpg" alt="Diapo5" /></p>
+	<p><img src="diapos/img06.jpg" alt="Diapo6" /></p>
+	</div><!--#diapos-->
+	
+	<h3>Caractéristiques</h3>
+	<ul>
+		<li>Très léger, simple à utiliser et rapide à installer&nbsp;;</li>
+		<li>Multiples diaporamas possibles dans la même page&nbsp;;</li>
+		<li>Support des diapos aux contenus Html formatés&nbsp;;</li>
+		<li>Personnalisation de l'aspect graphique avec les styles Css&nbsp;;</li>
+		<li>Configuration des durées d'affichage et de transition&nbsp;;</li>
+		<li>Ajout ponctuel d'une durée d'affichage additionnelle&nbsp;;</li>
+		<li>Affichage par ordre aléatoire des diapos&nbsp;;</li>
+		<li>Plusieurs moyens de navigation disponibles, dont&nbsp;:
+			<ul>
+				<li>Automatique par animation séquentielle (avec pause au survol de la diapo),</li>
+				<li>Manuel au clavier par touches flêchées (uniquement le premier diaporama),</li>
+				<li>Manuel à la souris par curseur interne,</li>
+				<li>Manuel à la souris par boutons externes (avec compteur de défilement).</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h2 id="tel" name="tel">Téléchargement</h2>
+	<ul>
+		<li>Projet&nbsp;: <strong>qkDiapo</strong>&nbsp;;</li>
+		<li>Version&nbsp;: 0402 <em>(03-2013)</em>&nbsp;;</li>
+		<li>Auteur&nbsp;: <a href="http://fredomkb.free.fr/" title="" target="_blank">FredoMkb &copy; 2013</a>&nbsp;;</li>
+		<li>Licence&nbsp;: Projet libre et open-source&nbsp;;</li>
+		<li>Fichier&nbsp;: <a href="qkdiapo_0402.zip" title="" target="_blank"><strong>qkDiapo_0402.zip</strong></a> <em>(340 Ko, avec cette documentation)</em>.</li>
+	</ul>
+
+
+	<h2 id="int" name="int">Intégration</h2>
+	<p>On commence donc par placer le dossier du plugin à la racine de votre site (ou à l'emplacement de votre choix suivant la structure de votre site). Une fois le répertoire du plug-in installé, deux étapes sont nécessaires pour intégrer <strong>qkDiapo</strong> (les chemins d'accès sont à adapter suivant votre installation)&nbsp;:</p>
+	
+	<h3>1. Styles Css</h3>
+	<p>Il faut commencer par importer les styles Css du plug-in dans la partier 'head' du code Html de votre page, avec le code suivant&nbsp;:</p>
+	<pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;qkdiapo/qkdiapo.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;</pre>
+	<p>Ou la version minimisée&nbsp;:</p>
+	<pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;qkdiapo/qkdiapo.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;</pre>
+
+	<h3>2. Librairies JavaScript</h3>
+	<p>Il faut ensuite intégrer les librairies JavaScript, toujours dans la partie 'head' de votre page, en commençant toujours par <strong>jQuery</strong> (la dernière version en date) puis après le plug-in <strong>qkDiapo</strong>&nbsp;:</p>
+	<pre>&lt;script src=&quot;http://code.jquery.com/jquery-latest.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;qkdiapo/qkdiapo.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;</pre>
+	<p>Ou les versions minimisées&nbsp;:</p>
+	<pre>&lt;script src=&quot;http://code.jquery.com/jquery-latest.min.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;qkdiapo/qkdiapo.min.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;</pre>
+
+	<h2 id="act" name="act">Activation</h2>
+	<p>Deux étapes pour activer et utiliser correctement le plug-in <strong>qkDiapo</strong>&nbsp;:</p>
+	
+	<h3>1. Code Html</h3>
+	<p>Pour utiliser le plug-in <strong>qkDiapo</strong>, il faut pouvoir cibler de manière précise la balise Html contenant les diapos à afficher. Prennons le code Html suivant&nbsp;:</p>
+	<pre>&lt;div&gt;
+	&lt;p&gt;Diapo 1&lt;/p&gt;
+	&lt;p&gt;Diapo 2&lt;/p&gt;
+	&lt;p&gt;Diapo 3&lt;/p&gt;
+&lt;/div&gt;</pre>
+	<p>Pour pouvoir cibler ce bloc 'div', il faut lui ajouter un attribut 'id', avec par exemple l'identifiant 'diapos'&nbsp;:</p>
+		<pre>&lt;div id=&quot;diapos&quot;&gt;
+	&lt;p&gt;Diapo 1&lt;/p&gt;
+	&lt;p&gt;Diapo 2&lt;/p&gt;
+	&lt;p&gt;Diapo 3&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+	<h3>2. Code JavaScript</h3>
+	<p>Il faut ensuite activer le plug-in, sur l'identifiant correspondant, en insérant le code JavaScript suivant (après l'intégration des librairies JavaScript)&nbsp;:</p>
+	<pre>&lt;script type=&#x27;text/javascript&#x27; charset=&quot;UTF-8&quot;&gt;
+$(document).ready(function() {		
+	$(&#x27;#diapos&#x27;).qkdiapo();
+});
+&lt;/script&gt;</pre>
+
+	<h2 id="con" name="con">Configuration</h2>
+	<p>Il est possible de configurer certaines options du plug-in <strong>qkDiapo</strong>, en utilisant la syntaxe suivante dans le code d'activation JavaScript&nbsp;:</p>
+		<pre>&lt;script type=&#x27;text/javascript&#x27; charset=&quot;UTF-8&quot;&gt;
+	$(document).ready(function() {		
+		$(&#x27;#diapos&#x27;).qkdiapo({
+			option1: valeur1, 
+			option2: valeur2, 
+			optionN: valeurN
+		});
+	});
+&lt;/script&gt;</pre>
+	
+	<p>Plusieurs options sont donc disponibles pour configurer le plug-in <strong>qkDiapo</strong>, regroupées en deux catégores&nbsp;:</p>
+	
+	<h3>1. Affichage</h3>
+	<table cellpadding="0" cellspacing="0">
+		<tr><th>Option</th><th>Type</th><th>Défaut</th><th>Description</th></tr>
+		<tr><td>slide_tag</td><td>texte</td><td>'*'</td><td>Sélecteur Css pour cibler les objets Html à utiliser comme diapos</td></tr>
+		<tr><td>fade_time</td><td>entier</td><td>600</td><td>Durée de l'effet de transition entre diapos</td></tr>
+		<tr><td>show_time</td><td>entier</td><td>4000</td><td>Durée d'affichage de chaque diapo</td></tr>
+		<tr><td>add_time</td><td>entier</td><td>6000</td><td>Durée d'affichage additionnel pour les diapos disposant d'une classe 'add' <br />(voir l'option 'add_class' ci-après pour personnaliser cette classe)</td></tr>
+		<tr><td>add_class</td><td>texte</td><td>'add'</td><td>Classe à utiliser sur les diapos nécessitant d'une durée d'affichage additionnelle <br />(voir option 'add_time' ci-dessus pour personnaliser cette durée)</td></tr>
+		<tr><td>sort_random</td><td>booléen</td><td>true</td><td>Faut-il trier les diapos dans un ordre aléatoire ?</td></tr>
+	</table>
+	
+	<h3>2. Navigation</h3>
+	<table cellpadding="0" cellspacing="0">
+		<tr><th>Option</th><th>Type</th><th>Défaut</th><th>Description</th></tr>
+		<tr><td>nav_auto</td><td>booléen</td><td>true</td><td>Faut-il activer la navigation automatiquement du diaporama ?</td></tr>
+		<tr><td>nav_keys</td><td>booléen</td><td>true</td><td>Faut-il activer la navigation avec les touches flêchées du clavier ? <br />Uniquement valable pour le premier diaporama lorsqu'il y en a plusieurs</td></tr>
+		<tr><td>nav_inner</td><td>booléen</td><td>true</td><td>Faut-il activer la navigation manuelle à l'intérieur du diaporama ?</td></tr>
+		<tr><td>nav_outer</td><td>booléen</td><td>true</td><td>Faut-il afficher le bloc de navigation extérieur au diaporama ?</td></tr>
+	</table>
+	<h3>Notes</h3>
+	<ol>
+		<li>Les options de durées sont exprimées en milli-secondes&nbsp;: 1000 = 1 seconde.</li>
+		<li>Les options de type booléen prennent l'une des deux valeurs suivantes&nbsp;: true = oui, false = non.</li>
+	</ol>
+
+
+	<h2 id="exe" name="exe">Exemples</h2>
+	<p>Voici quelques exemples d'intégation avec les codes sources correspondants&nbsp;:</p>
+
+	<h3>1. Basique</h3>
+	<p>Intégration basique, sur du contenu Html, avec la configuration par défaut et ajout d'une durée additionnelle sur la dernière diapo (class 'add').</p>
+
+	<div id="diapo1" class="diapo">
+	<p><strong>1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+	<p><strong>2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+	<p><strong>3</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+	<p class="add"><strong>4</strong> Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+	</div><!--#diapo1-->
+
+	<pre>&lt;!doctype html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;qkDiapo - Basique&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;qkdiapo.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+		&lt;script src=&quot;http://code.jquery.com/jquery-latest.min.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;qkdiapo.min.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+		&lt;script type=&#x27;text/javascript&#x27; charset=&quot;UTF-8&quot;&gt;
+			$(document).ready(function() {
+				$(&#x27;#diapos1&#x27;).qkdiapo();
+			});
+		&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;diapos1&quot;&gt;
+			&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; Lorem ipsum ...&lt;/p&gt;
+			&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt; Lorem ipsum ...&lt;/p&gt;
+			&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt; Lorem ipsum ...&lt;/p&gt;
+			&lt;p class=&quot;add&quot;&gt;&lt;strong&gt;4&lt;/strong&gt; Lorem ipsum ...&lt;/p&gt;
+		&lt;/div&gt;&lt;!--#diapos1--&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+	
+	<!-- ================================================== -->
+
+	<h3>2. Affichage</h3>
+	<p>Intégration avec configuration et personnalisation des durées d'affichage et de transition.</p>
+
+	<div id="diapo2" class="diapo">
+	<p><strong>1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+	<p><strong>2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+	<p><strong>3</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+	<p class="add"><strong>4</strong> Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+	</div><!--#diapo2-->
+	
+	<pre>&lt;!doctype html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;qkDiapo - Affichage&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;qkdiapo.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+		&lt;script src=&quot;http://code.jquery.com/jquery-latest.min.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;qkdiapo.min.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+		&lt;script type=&#x27;text/javascript&#x27; charset=&quot;UTF-8&quot;&gt;
+			$(document).ready(function() {
+				$(&#x27;#diapos2&#x27;).qkdiapo({
+					fade_time: 1200, 
+					show_time: 6000, 
+					add_time: 2000
+				});
+			});
+		&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;diapos2&quot;&gt;
+			&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; Lorem ipsum ...&lt;/p&gt;
+			&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt; Lorem ipsum ...&lt;/p&gt;
+			&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt; Lorem ipsum ...&lt;/p&gt;
+			&lt;p class=&quot;add&quot;&gt;&lt;strong&gt;4&lt;/strong&gt; Lorem ipsum ...&lt;/p&gt;
+		&lt;/div&gt;&lt;!--#diapos2--&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+	<h3>3. Navigation</h3>
+	<p>Désactivation de toutes les navigations hormis l'animation automatique, sans tri aléatoire des diapos et avec ciblage des éléments d'une liste.</p>
+
+	<div id="diapo3" class="diapo">
+		<ul>
+			<li><p><strong>1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p></li>
+			<li><p><strong>2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p></li>
+			<li><p><strong>3</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p></li>
+			<li class="add"><p><strong>4</strong> Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p></li>
+		</ul>
+	</div><!--#diapo3-->
+	
+	<pre>&lt;!doctype html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;qkDiapo - Navigation&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;qkdiapo.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+		&lt;script src=&quot;http://code.jquery.com/jquery-latest.min.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;qkdiapo.min.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+		&lt;script type=&#x27;text/javascript&#x27; charset=&quot;UTF-8&quot;&gt;
+			$(document).ready(function() {
+				$(&#x27;#diapos3&#x27;).qkdiapo({
+					slide_tag: &#x27;ul &gt; li&#x27;, 
+					nav_inner: false, 
+					nav_outer: false, 
+					nav_keys: false, 
+					sort_random: false
+				});
+			});
+		&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;diapos3&quot;&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; Lorem ipsum dolor sit amet, ...&lt;/p&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt; Lorem ipsum dolor sit amet, ...&lt;/p&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt; Lorem ipsum dolor sit amet, ...&lt;/p&gt;&lt;/li&gt;
+				&lt;li class=&quot;add&quot;&gt;&lt;p&gt;&lt;strong&gt;4&lt;/strong&gt; Lorem ipsum dolor sit amet, ...&lt;/p&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;&lt;!--#diapos3--&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+</div><!--#corps-->
+<!-- ================================================== -->
+</div><!--#page-->
+<div id="k"><a href="http://fredomkb.free.fr/" title="FredoMkb &copy; 2013" target="_blank">&nbsp;</a></div>
+</body>
+</html>

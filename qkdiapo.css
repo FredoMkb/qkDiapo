@@ -1,0 +1,98 @@
+/* -------------------------------------------------------------------------------- *\
+	Projet :		qkDiapo
+	Version :		0402 (03-2013)
+	Role : 			Petit script de diaporama avec jQuery - Little slideshow script with jQuery
+	Auteur :		FredoMkb (c) 2013 (http://fredomkb.free.fr/)
+	License :		Projet libre et open-source - Free and open-source project
+\* -------------------------------------------------------------------------------- */
+
+.qkdiapo { 
+	width: 600px; 
+	height: 300px; 
+	margin: 10px auto; 
+	padding: 10px;
+	border: 1px solid #ccc; 
+	border-radius: 5px; 
+	background-color: #fff; 
+	position: relative; 
+	overflow: hidden; 
+}
+
+.qkdiapo > * { 
+	width: 580px; 
+	height: 280px; 
+	margin: 10px; 
+	padding: 10px; 
+	top: 0;
+	left: 0;
+	position: absolute; 
+	overflow: auto; 
+}
+
+/* url('cur_prv.gif') */
+div.qkdiapo.nav_prv {
+	cursor: url('data:image/gif;base64,R0lGODlhEAAQALMAAAAAABwcHCUlJS0tLTw8PEFBQWxsbI6OjpeXl5qamsTExN/f3+Pj4/f39/7+/gAAACH5BAkAAA8ALAAAAAAQABAAAARF8Enpqp342X0xt8tRTZ/TIIHQfUoBAMPFMcb7xmUS2DdL8DbcRvEDwkoOHVD4ofGYGk6rN4pyGjpV1coJbSlIR4bEyUQAADs='),w-resize;
+}
+
+/* url('cur_nxt.gif') */
+div.qkdiapo.nav_nxt {
+	cursor: url('data:image/gif;base64,R0lGODlhEAAQALMAAAAAABwcHCUlJS0tLTw8PEFBQWxsbI6OjpeXl5qamsTExN/f3+Pj4/f39/7+/gAAACH5BAkAAA8ALAAAAAAQABAAAARC8Enpqp342X1xPQvXaZUQJI3oUNUAAIUiku37Goxa28Cpu7wXQcYBBoci48unUuI4NGBsRjMhUlQSSJfRVTKTrCQCADs='),e-resize;
+}
+
+div.qkdiapo_nav {
+	font-family: Verdana, Arial, sans-serif;
+	text-align: center;
+	width: 160px; 
+	margin: 0px auto 10px auto; 
+	padding: 0px;
+	background-color: #ffffff;
+	border: 1px solid #ccc; 
+	border-radius: 20px;
+	opacity: 0.4;
+	overflow: hidden;
+	clear: both;
+	z-index: 100;
+}
+
+div.qkdiapo_nav:hover {
+	opacity: 1;
+}
+
+div.qkdiapo_nav > span.qkdiapo_inf {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 2.8em;
+	color: #666666;
+	display: inline-block;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+div.qkdiapo_nav > span.qkdiapo_prv,
+div.qkdiapo_nav > span.qkdiapo_nxt {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	opacity: 0.4;
+}
+
+/* url('nav_prv.png') */
+div.qkdiapo_nav > span.qkdiapo_prv {
+	float: left;
+	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAkklEQVR42u3XwRFAUBRDUaUoRWd0REd0QAdPNn91F3+XGLyZrJ1JLBiqKpof8H6AblS2CEC3KJdSVoBuUg6lWiyAVnd7qAnAuo0A1m0CsG4TgHUbAazbBGDdJgDrNgJYdwqw+wGEzMrpB/AlXEMAzhICcJYAgLOEAJwlBOAsAQBnCQE4ixHQn+Wbn+WP+DH5Ab3co3LZseMmRDQAAAAASUVORK5CYII=') no-repeat center center;
+}
+
+/* url('nav_nxt.png') */
+div.qkdiapo_nav > span.qkdiapo_nxt {
+	float: right;
+	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAgklEQVR42u2WsQ2AMBDEMgqjsBlsBBvBBrBB+C6FpTSR/AWxdPWfzkVSJpMOZ2QpidTIE9nyCrRckdUvwBzQYhaAFr8AtagFZC08JmvhIVkLD9haKiJrqciAlswCd1aBN7JnKRh/SeW5iTw3kecm8txEnpt055bg3C5t7t9+yyf/4AMpA+4eROEjnwAAAABJRU5ErkJggg==') no-repeat center center;
+}
+
+div.qkdiapo_nav > span.qkdiapo_prv:hover,
+div.qkdiapo_nav > span.qkdiapo_nxt:hover {
+	opacity: 1;
+}
+
